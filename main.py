@@ -10,7 +10,7 @@ app = FastAPI(
 def home():
     return {"message": "Welcome to my FastAPI course!"}
 
-
+app.include_router(productRoutes, prefix="/products", tags=["Products"])
 ####CRUD APIS -Products - JSON File
-
-app.add_routes("/", productRoutes)
+##http://localhost:8000/products/
+##http://localhost:8000/products/create

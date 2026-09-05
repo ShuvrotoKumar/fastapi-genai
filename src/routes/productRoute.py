@@ -1,7 +1,13 @@
 from fastapi import APIRouter
-
+from src.utils.utils import get_all_products
 productRoutes = APIRouter()
 
 @productRoutes.get("/")
 def getAllProducts():
-    return {"message": "Get all products"}
+    return get_all_products() 
+
+
+
+@productRoutes.post("/create")
+def createNewProduct():
+    return {"message": "Create new product"}
