@@ -11,3 +11,4 @@ def getAllProducts():
 @productRoutes.post("/create")
 def createNewProduct():
     return {"message": "Create new product"}
+
